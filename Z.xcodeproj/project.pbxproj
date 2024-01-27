@@ -11,6 +11,10 @@
 		C873AE132B6550DB00DCFD74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE122B6550DB00DCFD74 /* ContentView.swift */; };
 		C873AE152B6550DC00DCFD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C873AE142B6550DC00DCFD74 /* Assets.xcassets */; };
 		C873AE182B6550DC00DCFD74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C873AE172B6550DC00DCFD74 /* Preview Assets.xcassets */; };
+		C873AE282B65523100DCFD74 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE272B65523100DCFD74 /* LoginView.swift */; };
+		C873AE2A2B6559B500DCFD74 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE292B6559B500DCFD74 /* RegistrationView.swift */; };
+		C873AE2E2B655B1800DCFD74 /* ZTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE2D2B655B1800DCFD74 /* ZTextFieldModifier.swift */; };
+		C873AE302B655C2900DCFD74 /* ZPrimaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE2F2B655C2900DCFD74 /* ZPrimaryButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		C873AE122B6550DB00DCFD74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C873AE142B6550DC00DCFD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C873AE172B6550DC00DCFD74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C873AE272B65523100DCFD74 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C873AE292B6559B500DCFD74 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		C873AE2D2B655B1800DCFD74 /* ZTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTextFieldModifier.swift; sourceTree = "<group>"; };
+		C873AE2F2B655C2900DCFD74 /* ZPrimaryButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPrimaryButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,12 @@
 		C873AE0F2B6550DB00DCFD74 /* Z */ = {
 			isa = PBXGroup;
 			children = (
-				C873AE102B6550DB00DCFD74 /* ZApp.swift */,
-				C873AE122B6550DB00DCFD74 /* ContentView.swift */,
+				C873AE232B6551A900DCFD74 /* App */,
+				C873AE222B6551A400DCFD74 /* Core */,
+				C873AE212B6551A300DCFD74 /* Extensions */,
+				C873AE202B6551A100DCFD74 /* Model */,
+				C873AE1F2B65519E00DCFD74 /* Services */,
+				C873AE1E2B65519C00DCFD74 /* Utils */,
 				C873AE142B6550DC00DCFD74 /* Assets.xcassets */,
 				C873AE162B6550DC00DCFD74 /* Preview Content */,
 			);
@@ -65,6 +77,94 @@
 				C873AE172B6550DC00DCFD74 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C873AE1E2B65519C00DCFD74 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE2C2B655AD500DCFD74 /* ViewModifiers */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C873AE1F2B65519E00DCFD74 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C873AE202B6551A100DCFD74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C873AE212B6551A300DCFD74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C873AE222B6551A400DCFD74 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE242B6551D200DCFD74 /* Authentication */,
+				C873AE252B6551DB00DCFD74 /* Root */,
+				C873AE312B655D2100DCFD74 /* TabBar */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C873AE232B6551A900DCFD74 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE102B6550DB00DCFD74 /* ZApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C873AE242B6551D200DCFD74 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE262B65522000DCFD74 /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C873AE252B6551DB00DCFD74 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE122B6550DB00DCFD74 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		C873AE262B65522000DCFD74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE272B65523100DCFD74 /* LoginView.swift */,
+				C873AE292B6559B500DCFD74 /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C873AE2C2B655AD500DCFD74 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE2D2B655B1800DCFD74 /* ZTextFieldModifier.swift */,
+				C873AE2F2B655C2900DCFD74 /* ZPrimaryButtonModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		C873AE312B655D2100DCFD74 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C873AE282B65523100DCFD74 /* LoginView.swift in Sources */,
 				C873AE132B6550DB00DCFD74 /* ContentView.swift in Sources */,
+				C873AE2E2B655B1800DCFD74 /* ZTextFieldModifier.swift in Sources */,
 				C873AE112B6550DB00DCFD74 /* ZApp.swift in Sources */,
+				C873AE302B655C2900DCFD74 /* ZPrimaryButtonModifier.swift in Sources */,
+				C873AE2A2B6559B500DCFD74 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
