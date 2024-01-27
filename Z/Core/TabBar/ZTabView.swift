@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ZTabView: View {
     @State private var selectedTab = 0
+    @State private var mostRecentTab = 0
+    @State private var showThreadreationView = false
     
     var body: some View {
         TabView(selection: $selectedTab)  {
@@ -27,7 +29,7 @@ struct ZTabView: View {
                 .onAppear{ selectedTab = 1}
                 .tag(1)
             
-            ThreadCreationView()
+            Text("")
                 .tabItem {
                    Image(systemName: "plus")
                 }
@@ -50,6 +52,15 @@ struct ZTabView: View {
                 .onAppear{ selectedTab = 4}
                 .tag(4)
         }
+        .onChange(of: selectedTab) { oldValue, newValue in
+            mostRecentTab = oldValue
+            showThreadreationView = selectedTab == 2
+        }
+        .sheet(isPresented: $showThreadreationView, onDismiss: {
+            selectedTab = mostRecentTab
+        }, content: {
+            ThreadCreationView()
+        })
         .tint(.black)
     }
 }
