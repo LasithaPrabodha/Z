@@ -15,6 +15,12 @@
 		C873AE2A2B6559B500DCFD74 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE292B6559B500DCFD74 /* RegistrationView.swift */; };
 		C873AE2E2B655B1800DCFD74 /* ZTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE2D2B655B1800DCFD74 /* ZTextFieldModifier.swift */; };
 		C873AE302B655C2900DCFD74 /* ZPrimaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE2F2B655C2900DCFD74 /* ZPrimaryButtonModifier.swift */; };
+		C873AE332B655F6500DCFD74 /* ZTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE322B655F6500DCFD74 /* ZTabView.swift */; };
+		C873AE372B65616200DCFD74 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE362B65616200DCFD74 /* FeedView.swift */; };
+		C873AE3B2B6561B800DCFD74 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE3A2B6561B800DCFD74 /* ExploreView.swift */; };
+		C873AE3F2B6561F500DCFD74 /* ThreadCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE3E2B6561F500DCFD74 /* ThreadCreationView.swift */; };
+		C873AE432B65624A00DCFD74 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE422B65624A00DCFD74 /* ActivityView.swift */; };
+		C873AE472B65626F00DCFD74 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE462B65626F00DCFD74 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		C873AE292B6559B500DCFD74 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		C873AE2D2B655B1800DCFD74 /* ZTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTextFieldModifier.swift; sourceTree = "<group>"; };
 		C873AE2F2B655C2900DCFD74 /* ZPrimaryButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPrimaryButtonModifier.swift; sourceTree = "<group>"; };
+		C873AE322B655F6500DCFD74 /* ZTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTabView.swift; sourceTree = "<group>"; };
+		C873AE362B65616200DCFD74 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		C873AE3A2B6561B800DCFD74 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		C873AE3E2B6561F500DCFD74 /* ThreadCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCreationView.swift; sourceTree = "<group>"; };
+		C873AE422B65624A00DCFD74 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		C873AE462B65626F00DCFD74 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +123,14 @@
 		C873AE222B6551A400DCFD74 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C873AE402B65622100DCFD74 /* Activity */,
 				C873AE242B6551D200DCFD74 /* Authentication */,
+				C873AE382B6561A600DCFD74 /* Explore */,
+				C873AE342B65615200DCFD74 /* Feed */,
+				C873AE442B65625B00DCFD74 /* Profile */,
 				C873AE252B6551DB00DCFD74 /* Root */,
 				C873AE312B655D2100DCFD74 /* TabBar */,
+				C873AE3C2B6561D700DCFD74 /* ThreadCreation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -163,8 +180,89 @@
 		C873AE312B655D2100DCFD74 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C873AE322B655F6500DCFD74 /* ZTabView.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C873AE342B65615200DCFD74 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE352B65615800DCFD74 /* Views */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C873AE352B65615800DCFD74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE362B65616200DCFD74 /* FeedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C873AE382B6561A600DCFD74 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE392B6561AE00DCFD74 /* Views */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		C873AE392B6561AE00DCFD74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE3A2B6561B800DCFD74 /* ExploreView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C873AE3C2B6561D700DCFD74 /* ThreadCreation */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE3D2B6561E300DCFD74 /* Views */,
+			);
+			path = ThreadCreation;
+			sourceTree = "<group>";
+		};
+		C873AE3D2B6561E300DCFD74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE3E2B6561F500DCFD74 /* ThreadCreationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C873AE402B65622100DCFD74 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE412B65622D00DCFD74 /* Views */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		C873AE412B65622D00DCFD74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE422B65624A00DCFD74 /* ActivityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C873AE442B65625B00DCFD74 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE452B65626700DCFD74 /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C873AE452B65626700DCFD74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE462B65626F00DCFD74 /* ProfileView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,12 +335,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C873AE432B65624A00DCFD74 /* ActivityView.swift in Sources */,
+				C873AE372B65616200DCFD74 /* FeedView.swift in Sources */,
+				C873AE3B2B6561B800DCFD74 /* ExploreView.swift in Sources */,
 				C873AE282B65523100DCFD74 /* LoginView.swift in Sources */,
+				C873AE472B65626F00DCFD74 /* ProfileView.swift in Sources */,
 				C873AE132B6550DB00DCFD74 /* ContentView.swift in Sources */,
 				C873AE2E2B655B1800DCFD74 /* ZTextFieldModifier.swift in Sources */,
 				C873AE112B6550DB00DCFD74 /* ZApp.swift in Sources */,
+				C873AE332B655F6500DCFD74 /* ZTabView.swift in Sources */,
 				C873AE302B655C2900DCFD74 /* ZPrimaryButtonModifier.swift in Sources */,
 				C873AE2A2B6559B500DCFD74 /* RegistrationView.swift in Sources */,
+				C873AE3F2B6561F500DCFD74 /* ThreadCreationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
