@@ -35,7 +35,7 @@ struct ThreadCell: View {
                        
                     }
                     
-                    Text("I just got a job")
+                    Text("I just got a new job!")
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
