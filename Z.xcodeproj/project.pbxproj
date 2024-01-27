@@ -21,6 +21,7 @@
 		C873AE3F2B6561F500DCFD74 /* ThreadCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE3E2B6561F500DCFD74 /* ThreadCreationView.swift */; };
 		C873AE432B65624A00DCFD74 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE422B65624A00DCFD74 /* ActivityView.swift */; };
 		C873AE472B65626F00DCFD74 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE462B65626F00DCFD74 /* ProfileView.swift */; };
+		C873AE492B65638B00DCFD74 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE482B65638B00DCFD74 /* ThreadCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		C873AE3E2B6561F500DCFD74 /* ThreadCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCreationView.swift; sourceTree = "<group>"; };
 		C873AE422B65624A00DCFD74 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		C873AE462B65626F00DCFD74 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C873AE482B65638B00DCFD74 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C873AE362B65616200DCFD74 /* FeedView.swift */,
+				C873AE482B65638B00DCFD74 /* ThreadCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				C873AE132B6550DB00DCFD74 /* ContentView.swift in Sources */,
 				C873AE2E2B655B1800DCFD74 /* ZTextFieldModifier.swift in Sources */,
 				C873AE112B6550DB00DCFD74 /* ZApp.swift in Sources */,
+				C873AE492B65638B00DCFD74 /* ThreadCell.swift in Sources */,
 				C873AE332B655F6500DCFD74 /* ZTabView.swift in Sources */,
 				C873AE302B655C2900DCFD74 /* ZPrimaryButtonModifier.swift in Sources */,
 				C873AE2A2B6559B500DCFD74 /* RegistrationView.swift in Sources */,
