@@ -36,6 +36,9 @@
 		C873AE662B659B6700DCFD74 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE652B659B6700DCFD74 /* AuthService.swift */; };
 		C873AE6B2B65A04700DCFD74 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE6A2B65A04700DCFD74 /* ContentViewModel.swift */; };
 		C873AE6D2B65A54F00DCFD74 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE6C2B65A54F00DCFD74 /* LoginViewModel.swift */; };
+		C873AE6F2B65D35700DCFD74 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE6E2B65D35700DCFD74 /* User.swift */; };
+		C873AE712B65D5DE00DCFD74 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE702B65D5DE00DCFD74 /* UserService.swift */; };
+		C873AE742B65D77E00DCFD74 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873AE732B65D77E00DCFD74 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		C873AE652B659B6700DCFD74 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C873AE6A2B65A04700DCFD74 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		C873AE6C2B65A54F00DCFD74 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C873AE6E2B65D35700DCFD74 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C873AE702B65D5DE00DCFD74 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		C873AE732B65D77E00DCFD74 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 		C873AE1F2B65519E00DCFD74 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C873AE702B65D5DE00DCFD74 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		C873AE202B6551A100DCFD74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C873AE6E2B65D35700DCFD74 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 		C873AE442B65625B00DCFD74 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C873AE722B65D76C00DCFD74 /* ViewModel */,
 				C873AE522B65736700DCFD74 /* EditProfile */,
 				C873AE4F2B656D0400DCFD74 /* Model */,
 				C873AE452B65626700DCFD74 /* Views */,
@@ -357,6 +366,14 @@
 			isa = PBXGroup;
 			children = (
 				C873AE6A2B65A04700DCFD74 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C873AE722B65D76C00DCFD74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C873AE732B65D77E00DCFD74 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -448,10 +465,13 @@
 				C873AE372B65616200DCFD74 /* FeedView.swift in Sources */,
 				C873AE6B2B65A04700DCFD74 /* ContentViewModel.swift in Sources */,
 				C873AE3B2B6561B800DCFD74 /* ExploreView.swift in Sources */,
+				C873AE742B65D77E00DCFD74 /* ProfileViewModel.swift in Sources */,
 				C873AE512B656D1B00DCFD74 /* ProfileThreadFilter.swift in Sources */,
+				C873AE712B65D5DE00DCFD74 /* UserService.swift in Sources */,
 				C873AE662B659B6700DCFD74 /* AuthService.swift in Sources */,
 				C873AE282B65523100DCFD74 /* LoginView.swift in Sources */,
 				C873AE472B65626F00DCFD74 /* ProfileView.swift in Sources */,
+				C873AE6F2B65D35700DCFD74 /* User.swift in Sources */,
 				C873AE132B6550DB00DCFD74 /* ContentView.swift in Sources */,
 				C873AE2E2B655B1800DCFD74 /* ZTextFieldModifier.swift in Sources */,
 				C873AE4C2B656A1200DCFD74 /* CircularProfileImageView.swift in Sources */,

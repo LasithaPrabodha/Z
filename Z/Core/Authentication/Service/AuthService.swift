@@ -5,8 +5,8 @@
 //  Created by Lasitha Weligampola on 2024-01-27.
 //
 
-import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
 class AuthService {
     @Published var userSession: FirebaseAuth.User?
@@ -17,12 +17,23 @@ class AuthService {
         self.userSession = Auth.auth().currentUser
     }
     
+    private func uploadUserData(
+        withEmail email:String,
+        fullname: String,
+        username: String,
+        id:String
+    ) async throws{
+        let user = User(id: id, fullname: fullname, email: email, username: username)
+        guard let userData = try? Firestore.Encoder().encode(user) else {return}
+        
+        try await Firestore.firestore().collection("users").document(id).setData(userData)
+    }
+    
     @MainActor
     func login(withEmail email:String, password: String) async throws {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
-            print("DEBUG: User logged in \(result.user.uid)")
         } catch {
             print("DEBUG: Failed to login user \(error.localizedDescription)")
         }
@@ -33,7 +44,7 @@ class AuthService {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
-            print("DEBUG: Created user \(result.user.uid)")
+            try await uploadUserData(withEmail: email, fullname: fullname, username: username, id: result.user.uid)
         } catch {
             print("DEBUG: Failed to create user \(error.localizedDescription)")
         }
