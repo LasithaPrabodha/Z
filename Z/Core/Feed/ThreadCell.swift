@@ -12,7 +12,7 @@ struct ThreadCell: View {
         VStack{
             HStack(alignment: .top, spacing: 12) {
                 
-                CircularProfileImageView()
+                CircularProfileImageView(user: nil, size: .small)
                 
                 VStack(alignment: .leading, spacing: 4){
                     HStack {
@@ -68,7 +68,8 @@ struct ThreadCell: View {
             
             Divider()
         }
-        .padding()
+        .padding(.horizontal)
+        .padding(.top, 10)
     }
 }
 

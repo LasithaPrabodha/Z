@@ -8,10 +8,11 @@
 import Foundation
 import Combine
 
-class CurrentProfileViewModel: ObservableObject {
+class CurrentUserProfileViewModel: ObservableObject {
     @Published var currentUser:User?
+    
     private var cancellable: AnyCancellable?
-
+    
     
     init(){
         setupSubscribers()
@@ -22,4 +23,5 @@ class CurrentProfileViewModel: ObservableObject {
             self?.currentUser = user
         }
     }
+    
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct UserProfileView: View {
     let user: User
     
     var body: some View {
@@ -37,5 +37,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView(user: DeveloperPreview.shared.user)
+    UserProfileView(user: DeveloperPreview.shared.user)
 }

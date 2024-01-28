@@ -39,79 +39,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "284D7B3A-8329-4080-B7CB-3615B5CDD4BF"
+            uuid = "514E9814-852E-41E3-8F3C-511D2257442E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Z/Services/UserService.swift"
+            filePath = "Z/Core/Profile/CurrentUserProfile/ViewModel/CurrentProfileViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "fetchUsers()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "setupSubscribers()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "284D7B3A-8329-4080-B7CB-3615B5CDD4BF - 7469d146b7b0e95f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for static Z.UserService.fetchUsers() async throws -&gt; Swift.Array&lt;Z.User&gt;"
-                  moduleName = "Z"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/UserService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "320">
-               </Location>
-               <Location
-                  uuid = "284D7B3A-8329-4080-B7CB-3615B5CDD4BF - ad9d5a48f24f7bcd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Z.User) -&gt; Swift.Bool in static Z.UserService.fetchUsers() async throws -&gt; Swift.Array&lt;Z.User&gt;"
-                  moduleName = "Z"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/UserService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "284D7B3A-8329-4080-B7CB-3615B5CDD4BF - 7469d146b7b0e991"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for static Z.UserService.fetchUsers() async throws -&gt; Swift.Array&lt;Z.User&gt;"
-                  moduleName = "Z"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/UserService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "320">
-               </Location>
-               <Location
-                  uuid = "284D7B3A-8329-4080-B7CB-3615B5CDD4BF - ad9d5a48f24f7b03"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Z.User) -&gt; Swift.Bool in static Z.UserService.fetchUsers() async throws -&gt; Swift.Array&lt;Z.User&gt;"
-                  moduleName = "Z"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/UserService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

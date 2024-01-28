@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct CurrentUserProfileView: View {
-    @StateObject var viewModel = CurrentProfileViewModel()
+    @StateObject var viewModel = CurrentUserProfileViewModel()
+    @State private var showEditProfile = false
     
     private var buttonWidth: CGFloat{
         return UIScreen.main.bounds.width / 2 - 20
@@ -27,7 +28,7 @@ struct CurrentUserProfileView: View {
                     
                     HStack{
                         Button{
-                            
+                            showEditProfile.toggle()
                         }label: {
                             Text("Edit Profile")
                                 .font(.subheadline)
@@ -63,6 +64,11 @@ struct CurrentUserProfileView: View {
                     UserContentListView()
                 }
             }
+            .sheet(isPresented: $showEditProfile, content: {
+                if let user = currentUser{
+                    EditProfileView(user: user)
+                }
+            })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
