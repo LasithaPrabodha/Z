@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FeedView: View {
-    @StateObject var viewModel = FeadViewModel()
+    @StateObject var viewModel = FeedViewModel()
     
     var body: some View {
         NavigationStack {
@@ -16,9 +16,15 @@ struct FeedView: View {
                 LazyVStack {
                     ForEach(viewModel.threads){ thread in
                         ThreadCell(thread: thread)
+                            .environmentObject(viewModel)
                     }
                 }
             }
+            .sheet(isPresented: $viewModel.showAddComment, content: {
+                if let thread = viewModel.selectedThread {
+                    CommentView(thread: thread)
+                }
+            })
             .refreshable {
                 Task { try await viewModel.fetchThreads()} 
             }

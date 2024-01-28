@@ -8,8 +8,12 @@
 import Foundation
 
 @MainActor
-class FeadViewModel: ObservableObject {
+class FeedViewModel: ObservableObject {
     @Published var threads = [Thread]()
+    @Published var showAddComment = false
+    var selectedThread: Thread? {
+        didSet { self.showAddComment = selectedThread != nil }
+    }
     
     init() {
         Task { try await fetchThreads() }
@@ -17,10 +21,10 @@ class FeadViewModel: ObservableObject {
     
     func fetchThreads() async throws {
         self.threads  = try await ThreadService.fetchThreads()
-        try await fetchUserData()
+        try await fetchUserDataForFeeds()
     }
     
-    private func fetchUserData() async throws {
+    private func fetchUserDataForFeeds() async throws {
         for i in 0 ..< threads.count {
             let thread = threads[i]
             let ownerUid = thread.ownerUid

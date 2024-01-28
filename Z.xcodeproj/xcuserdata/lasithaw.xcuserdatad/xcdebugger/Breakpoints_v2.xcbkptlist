@@ -14,8 +14,8 @@
             filePath = "Z/Core/TabBar/ZTabView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -55,17 +55,375 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "52DB77CE-C807-45ED-BA92-57B809946161"
+            uuid = "82DD8CD2-4F76-4182-A8AC-F41B639E068D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Z/Services/UserService.swift"
+            filePath = "Z/Core/Components/ThreadCellViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "fetchCurrentUser()"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "checkLikedByTheUser(threadId:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82DD8CD2-4F76-4182-A8AC-F41B639E068D - ef47bd52d0bc0660"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for Z.ThreadCellViewModel.fetchUserForThread() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "82DD8CD2-4F76-4182-A8AC-F41B639E068D - 80a7deba33ce781"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for Z.ThreadCellViewModel.fetchUserForThread() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "82DD8CD2-4F76-4182-A8AC-F41B639E068D - a1de3a2373bfc9a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for Z.ThreadCellViewModel.fetchUserForThread() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "82DD8CD2-4F76-4182-A8AC-F41B639E068D - deef3cc5b1ba4226"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Z.ThreadCellViewModel.fetchUserForThread() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "684">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED4BF030-E70D-41F5-8C7E-8B2A838658C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Z/Core/Components/ThreadCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "incrementLikes(threadId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ED4BF030-E70D-41F5-8C7E-8B2A838658C7 - c4655aac864bffe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Z.ThreadCellViewModel.incrementLikes() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "ED4BF030-E70D-41F5-8C7E-8B2A838658C7 - 4cb86e32f4de2c2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Z.ThreadCellViewModel.incrementLikes() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "ED4BF030-E70D-41F5-8C7E-8B2A838658C7 - dca6cfec973282e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Z.ThreadCellViewModel.incrementLikes() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "ED4BF030-E70D-41F5-8C7E-8B2A838658C7 - c4655aac864bf821"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Z.ThreadCellViewModel.incrementLikes() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "ED4BF030-E70D-41F5-8C7E-8B2A838658C7 - 81f0c0939e81de22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Z.ThreadCellViewModel.incrementLikes() async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Core/Components/ThreadCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61DDF6CB-59D5-4DFD-9D8B-6EABE832505C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Z/Core/Components/ThreadCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "removeLike(threadId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30500194-64E9-4793-8758-1F1892BA8BD6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Z/Services/ThreadService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "addLike(threadId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "30500194-64E9-4793-8758-1F1892BA8BD6 - 435f90785acb08cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "30500194-64E9-4793-8758-1F1892BA8BD6 - 45bc4c143978a7af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "30500194-64E9-4793-8758-1F1892BA8BD6 - 23af61c888f6b4c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "30500194-64E9-4793-8758-1F1892BA8BD6 - 43f315fe621f0cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "30500194-64E9-4793-8758-1F1892BA8BD6 - 435f90785acb08cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  uuid = "30500194-64E9-4793-8758-1F1892BA8BD6 - 435f90785acb08ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62AF2393-9215-4BE8-9A12-194DE27D2B85"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Z/Services/ThreadService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "addLike(threadId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62AF2393-9215-4BE8-9A12-194DE27D2B85 - 435f90785acb0928"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "62AF2393-9215-4BE8-9A12-194DE27D2B85 - 435f90785acb0928"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "62AF2393-9215-4BE8-9A12-194DE27D2B85 - 435f90785acb08cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Z.ThreadService.addLike(threadId: Swift.String) async throws -&gt; ()"
+                  moduleName = "Z"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasithaw/Projects/Z/Z/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C9C5D74-90A2-4493-8732-23AC5EA457C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Z/Core/Feed/FeedView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

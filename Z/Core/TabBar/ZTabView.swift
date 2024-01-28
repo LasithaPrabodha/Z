@@ -12,6 +12,10 @@ struct ZTabView: View {
     @State private var mostRecentTab = 0
     @State private var showThreadreationView = false
     
+    init() {
+        Task{ try await UserService.shared.fetchCurrentUser() }
+    }
+    
     var body: some View {
         TabView(selection: $selectedTab)  {
             FeedView()

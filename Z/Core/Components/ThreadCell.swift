@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct ThreadCell: View {
+    @StateObject var viewModel: ThreadCellViewModel
+    @EnvironmentObject var feedViewModel: FeedViewModel
     let thread: Thread
+    
+    init(thread: Thread) {
+        self.thread = thread
+        self._viewModel = StateObject(wrappedValue: ThreadCellViewModel(thread: thread))
+    }
     
     var body: some View {
         VStack{
@@ -43,12 +50,18 @@ struct ThreadCell: View {
                     
                     HStack(spacing: 16){
                         Button{
+                            if viewModel.liked {
+                                Task { try await viewModel.removeLike(threadId: thread.id) }
+                            } else {
+                                Task { try await viewModel.incrementLikes(threadId: thread.id) }
+                            }
                             
-                        }label: {
-                            Image(systemName: "heart")
+                        } label: {
+                            Image(systemName: viewModel.liked ? "heart.fill" : "heart")
+                                .foregroundColor(viewModel.liked ? .red : .black)
                         }
                         Button{
-                            
+                            feedViewModel.selectedThread = thread
                         }label: {
                             Image(systemName: "bubble.right")
                         }
@@ -65,6 +78,23 @@ struct ThreadCell: View {
                     }
                     .foregroundColor(.black)
                     .padding(.vertical, 8)
+                    
+                    
+                    HStack(spacing: 8){
+                        Text("\(viewModel.likes) likes")
+                            .foregroundColor(Color(.systemGray))
+                            .font(.caption2)
+                        
+                        Image(systemName: "circle.fill")
+                            .resizable()
+                            .frame(width: 4, height: 4)
+                            .foregroundColor(Color(.systemGray4))
+                           
+                        
+                        Text("2 replies")
+                            .foregroundColor(Color(.systemGray))
+                            .font(.caption2)
+                    }
                 }
             }
             
