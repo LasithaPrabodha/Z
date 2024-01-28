@@ -30,10 +30,12 @@ struct RegistrationView: View {
                     .modifier(ZTextFieldModifier())
                 
                 TextField("Enter your full name", text: $viewModel.fullname)
+                    .autocorrectionDisabled()
                     .modifier(ZTextFieldModifier())
                 
                 TextField("Enter your username", text: $viewModel.username)
                     .autocapitalization(.none)
+                    .autocorrectionDisabled()
                     .modifier(ZTextFieldModifier())
                 
             }
