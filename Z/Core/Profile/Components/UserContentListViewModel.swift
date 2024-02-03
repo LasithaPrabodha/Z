@@ -9,7 +9,7 @@ import Foundation
 
 class UserContentListViewModel: ObservableObject{
     @Published var threads = [Thread]()
-    
+   
     let user: User
     
     init(user: User) {

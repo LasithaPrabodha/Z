@@ -7,30 +7,37 @@
 
 import SwiftUI
 
-struct FeedView: View {
-    @StateObject var viewModel = FeedViewModel()
+struct ThreadsView: View {
+    @StateObject var viewModel = ThreadsViewModel()
+
+    @State var selectedThread: Thread? = nil
     
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     ForEach(viewModel.threads){ thread in
-                        ThreadCell(thread: thread)
-                            .environmentObject(viewModel)
+                        NavigationLink(destination: ThreadView(thread: thread)){
+                            ThreadCell(thread: thread) {
+                                self.selectedThread = thread
+                            }
+                        }
+                        
                     }
                 }
             }
-            .sheet(isPresented: $viewModel.showAddComment, content: {
-                if let thread = viewModel.selectedThread {
-                    CommentView(thread: thread)
-                }
+            .sheet(item: $selectedThread, content: { thread in
+                CommentView(thread: thread)
             })
             .refreshable {
-                Task { try await viewModel.fetchThreads()} 
+                Task { try await viewModel.fetchThreads()}
             }
-            .navigationTitle("Feeds")
+            .navigationTitle("Threads")
             .navigationBarTitleDisplayMode(.inline)
+            
+            
         }
+        
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button{
@@ -42,10 +49,11 @@ struct FeedView: View {
             }
         }
     }
+    
 }
 
 #Preview {
     NavigationStack{
-        FeedView()
+        ThreadsView(selectedThread: DeveloperPreview.shared.thread)
     }
 }

@@ -10,10 +10,14 @@ import Foundation
 @MainActor
 class ThreadCellViewModel: ObservableObject {
     @Published var likes: Int = 0
+    @Published var replies: Int = 0
     @Published var liked = false
+    @Published var isYourProfile = false
     
     init(thread: Thread) {
         self.likes = thread.likes
+        self.replies = thread.replies
+        self.isYourProfile = UserService.shared.currentUser?.id == thread.user?.id
         
         Task { try await checkLikedByTheUser(threadId: thread.id) }
     }
@@ -24,14 +28,23 @@ class ThreadCellViewModel: ObservableObject {
         }
     }
     
-    func incrementLikes(threadId: String) async throws {
-        try await ThreadService.addLike(threadId: threadId)
+    func incrementLikes(threadId: String, _ isReply: Bool) async throws {
+        if isReply{
+            try await ReplyService.addLike(threadId: threadId)
+        }else{
+            try await ThreadService.addLike(threadId: threadId)
+        }
         self.likes += 1
         self.liked.toggle()
     }
     
-    func removeLike(threadId: String) async throws {
-        try await ThreadService.removeLike(threadId: threadId)
+    func removeLike(threadId: String, _ isReply: Bool) async throws {
+        if isReply{
+            try await ReplyService.removeLike(threadId: threadId)
+        }else{
+            try await ThreadService.removeLike(threadId: threadId)
+        }
+        
         self.likes -= 1
         self.liked.toggle()
     }

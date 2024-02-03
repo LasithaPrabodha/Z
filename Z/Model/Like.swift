@@ -9,9 +9,10 @@ import Foundation
 import FirebaseFirestoreSwift
 
 struct Like: Identifiable, Codable {
-    @DocumentID var threadId: String?
-    
+    @DocumentID var likeId: String?
+    let uid: String
+    let threadId: String
     var id: String{
-        return threadId ?? NSUUID().uuidString
+        return likeId ?? NSUUID().uuidString
     }
 }

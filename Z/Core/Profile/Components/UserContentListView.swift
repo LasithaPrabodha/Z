@@ -11,6 +11,7 @@ struct UserContentListView: View {
     @StateObject var viewModel: UserContentListViewModel
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
+    @State var selectedThread: Thread? = nil;
     
     private var filterBarWidth: CGFloat{
         let count = CGFloat(ProfileThreadFilter.allCases.count)
@@ -52,10 +53,15 @@ struct UserContentListView: View {
             
             LazyVStack{
                 ForEach(viewModel.threads){thread in
-                    ThreadCell(thread: thread)
+                    ThreadCell(thread: thread){
+                        self.selectedThread = thread
+                    }
                 }
                 
             }
+            .sheet(item: $selectedThread, content: { thread in
+                CommentView(thread: thread)
+            })
         }
         .padding(.vertical, 8)
     }

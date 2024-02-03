@@ -9,25 +9,57 @@ import SwiftUI
 
 struct ThreadCell: View {
     @StateObject var viewModel: ThreadCellViewModel
-    @EnvironmentObject var feedViewModel: FeedViewModel
+    let onCommentIconTapped: () -> Void
     let thread: Thread
+    let isThreadView: Bool
+    let isReply: Bool
     
-    init(thread: Thread) {
-        self.thread = thread
+    init(
+        thread: Thread,
+        isThreadView: Bool = false,
+        isReply: Bool = false,
+        onCommentIconTapped: @escaping () -> Void
+    ) {
         self._viewModel = StateObject(wrappedValue: ThreadCellViewModel(thread: thread))
+        self.thread = thread
+        self.isThreadView = isThreadView
+        self.isReply = isReply
+        self.onCommentIconTapped = onCommentIconTapped
+    }
+    
+    
+    @ViewBuilder
+    private func destination() -> some View {
+        if viewModel.isYourProfile {
+            CurrentUserProfileView()
+        } else {
+            UserProfileView(user: thread.user!)
+        }
     }
     
     var body: some View {
+        
         VStack{
             HStack(alignment: .top, spacing: 12) {
                 
-                CircularProfileImageView(user: thread.user, size: .small)
+                if !isThreadView {
+                    NavigationLink(destination: self.destination()){
+                        CircularProfileImageView(user: thread.user, size: .small)
+                    }
+                }
                 
                 VStack(alignment: .leading, spacing: 4){
                     HStack {
-                        Text(thread.user?.username ?? "")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
+                        if isThreadView {
+                            NavigationLink(destination: self.destination()){
+                                CircularProfileImageView(user: thread.user, size: .small)
+                            }
+                        }
+                        NavigationLink(destination: self.destination()){
+                            Text(thread.user?.username ?? "")
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                        }
                         
                         Spacer()
                         
@@ -41,19 +73,20 @@ struct ThreadCell: View {
                             Image(systemName: "ellipsis")
                                 .foregroundColor(Color(.darkGray))
                         }
-                       
+                        
                     }
                     
                     Text(thread.caption)
+                        .padding(.top, isThreadView ? 8 : 0)
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
                     HStack(spacing: 16){
                         Button{
                             if viewModel.liked {
-                                Task { try await viewModel.removeLike(threadId: thread.id) }
+                                Task { try await viewModel.removeLike(threadId: thread.id, isReply) }
                             } else {
-                                Task { try await viewModel.incrementLikes(threadId: thread.id) }
+                                Task { try await viewModel.incrementLikes(threadId: thread.id, isReply) }
                             }
                             
                         } label: {
@@ -61,7 +94,7 @@ struct ThreadCell: View {
                                 .foregroundColor(viewModel.liked ? .red : .black)
                         }
                         Button{
-                            feedViewModel.selectedThread = thread
+                            self.onCommentIconTapped()
                         }label: {
                             Image(systemName: "bubble.right")
                         }
@@ -81,19 +114,23 @@ struct ThreadCell: View {
                     
                     
                     HStack(spacing: 8){
-                        Text("\(viewModel.likes) likes")
-                            .foregroundColor(Color(.systemGray))
-                            .font(.caption2)
+                        if viewModel.likes > 0 {
+                            Text("\(viewModel.likes) like\(viewModel.likes > 1 ? "s":"")")
+                                .foregroundColor(Color(.systemGray))
+                                .font(.caption2)
+                        }
+                        if viewModel.replies > 0 && viewModel.likes > 0 {
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .frame(width: 4, height: 4)
+                                .foregroundColor(Color(.systemGray4))
+                        }
+                        if viewModel.replies > 0 {
+                            Text("\(viewModel.replies) replies")
+                                .foregroundColor(Color(.systemGray))
+                                .font(.caption2)
+                        }
                         
-                        Image(systemName: "circle.fill")
-                            .resizable()
-                            .frame(width: 4, height: 4)
-                            .foregroundColor(Color(.systemGray4))
-                           
-                        
-                        Text("2 replies")
-                            .foregroundColor(Color(.systemGray))
-                            .font(.caption2)
                     }
                 }
             }
@@ -102,9 +139,12 @@ struct ThreadCell: View {
         }
         .padding(.horizontal)
         .padding(.top, 10)
+        
+        
     }
 }
 
+
 #Preview {
-    ThreadCell(thread: DeveloperPreview.shared.thread)
+    ThreadCell(thread: DeveloperPreview.shared.thread,isThreadView: false){}
 }
